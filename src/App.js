@@ -42,6 +42,21 @@ export default function App() {
         image: placeholder,
         clicked: false,
       },
+      {
+        name: 'tourmaline',
+        image: placeholder,
+        clicked: false,
+      },
+      {
+        name: 'garnet',
+        image: placeholder,
+        clicked: false,
+      },
+      {
+        name: 'opal',
+        image: placeholder,
+        clicked: false,
+      },
     ],
   );
 
