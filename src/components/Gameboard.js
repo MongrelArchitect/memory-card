@@ -35,9 +35,19 @@ export default function Gameboard({
     return randomized;
   };
 
+  const clearClicked = (array) => {
+    const cleared = [];
+    array.forEach((gem) => {
+      const clearGem = { ...gem };
+      clearGem.clicked = false;
+      cleared.push(clearGem);
+    });
+    return cleared;
+  };
+
   const clickGem = (event) => {
     const key = +event.target.dataset.key;
-    const gemsCopy = getGemsCopy(gems);
+    let gemsCopy = getGemsCopy(gems);
     if (!gems[key].clicked) {
       gemsCopy[key].clicked = true;
       setScore(score + 1);
@@ -46,6 +56,7 @@ export default function Gameboard({
         setBest(score);
       }
       setScore(0);
+      gemsCopy = clearClicked(gemsCopy);
     }
     setGems(shuffleGems(gemsCopy));
   };
