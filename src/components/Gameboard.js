@@ -1,6 +1,13 @@
 import React, { useEffect } from 'react';
 
-export default function Gameboard({ gems, setGems }) {
+export default function Gameboard({
+  gems,
+  setGems,
+  score,
+  setScore,
+  best,
+  setBest,
+}) {
   const getGemsCopy = () => {
     const tempGems = [];
     gems.forEach((gem) => {
@@ -13,7 +20,7 @@ export default function Gameboard({ gems, setGems }) {
     return tempGems;
   };
 
-  const randomizeArray = (array) => {
+  const shuffleGems = (array) => {
     const randomized = [];
     const tried = [];
     let i = 0;
@@ -28,19 +35,23 @@ export default function Gameboard({ gems, setGems }) {
     return randomized;
   };
 
-  const shuffleGems = () => {
+  const clickGem = (event) => {
+    const key = +event.target.dataset.key;
     const gemsCopy = getGemsCopy(gems);
-    const randomGems = randomizeArray(gemsCopy);
-    setGems(randomGems);
-  };
-
-  const clickGem = () => {
-    shuffleGems();
+    if (!gems[key].clicked) {
+      gemsCopy[key].clicked = true;
+      setScore(score + 1);
+    } else {
+      if (score > best) {
+        setBest(score);
+      }
+      setScore(0);
+    }
+    setGems(shuffleGems(gemsCopy));
   };
 
   useEffect(() => {
-    // Randomize the gems on mount
-    shuffleGems();
+    setGems(shuffleGems(getGemsCopy(gems)));
   }, []);
 
   return (
@@ -58,6 +69,10 @@ export default function Gameboard({ gems, setGems }) {
         >
           <img src={gem.image} alt={`A cut and polished ${gem.name}`} />
           <span>{gem.name}</span>
+          <span>
+            clicked:
+            {gem.clicked ? 'YES' : 'no'}
+          </span>
         </div>
       ))}
     </div>
