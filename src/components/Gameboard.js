@@ -79,12 +79,7 @@ export default function Gameboard({
       {gems.map((gem) => (
         <div
           className="gem"
-          data-key={gems.indexOf(gem)}
           key={gems.indexOf(gem)}
-          onClick={clickGem}
-          onKeyDown={clickGem}
-          role="button"
-          tabIndex={0}
           style={{
             background: `center/90% no-repeat #f1eee9 url(${gem.image})`,
           }}

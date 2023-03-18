@@ -16,6 +16,8 @@ import tanzanite from '../images/tanzanite.png';
 import topaz from '../images/topaz.png';
 import tourmaline from '../images/tourmaline.png';
 import turquoise from '../images/turquoise.png';
+import carnelian from '../images/carnelian.png';
+import tiger from '../images/tiger.png';
 
 const gems = [
   {
@@ -106,6 +108,16 @@ const gems = [
   {
     name: 'ammolite',
     image: ammolite,
+    clicked: false,
+  },
+  {
+    name: 'carnelian',
+    image: carnelian,
+    clicked: false,
+  },
+  {
+    name: 'tiger\'s eye',
+    image: tiger,
     clicked: false,
   },
 ];
