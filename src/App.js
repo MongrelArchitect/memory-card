@@ -56,6 +56,51 @@ export default function App() {
       image: placeholder,
       clicked: false,
     },
+    {
+      name: 'topaz',
+      image: placeholder,
+      clicked: false,
+    },
+    {
+      name: 'alexandrite',
+      image: placeholder,
+      clicked: false,
+    },
+    {
+      name: 'tanzanite',
+      image: placeholder,
+      clicked: false,
+    },
+    {
+      name: 'amber',
+      image: placeholder,
+      clicked: false,
+    },
+    {
+      name: 'aquamarine',
+      image: placeholder,
+      clicked: false,
+    },
+    {
+      name: 'pearl',
+      image: placeholder,
+      clicked: false,
+    },
+    {
+      name: 'lapis lazuli',
+      image: placeholder,
+      clicked: false,
+    },
+    {
+      name: 'turquoise',
+      image: placeholder,
+      clicked: false,
+    },
+    {
+      name: 'jade',
+      image: placeholder,
+      clicked: false,
+    },
   ]);
 
   const [score, setScore] = useState(0);

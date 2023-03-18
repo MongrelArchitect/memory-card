@@ -6,12 +6,21 @@ body {
   background: #ccc;
 }
 
+.gems {
+  display: grid;
+  gap: 16px;
+  grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+}
+
 .gem {
-  align-items: flex-start;
+  align-items: center;
+  justify-content: flex-end;
   border: 2px solid magenta;
   cursor: pointer;
   display: flex;
   flex-direction: column;
+  height: 100px;
+  width: 100px;
 }
 
 #root > div > div {
