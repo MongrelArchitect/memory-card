@@ -1,5 +1,9 @@
 import React, { useEffect } from 'react';
 
+import {
+  getGemsCopy, shuffleGems, clearClicked,
+} from './Gems';
+
 export default function Gameboard({
   gems,
   setGems,
@@ -8,43 +12,6 @@ export default function Gameboard({
   best,
   setBest,
 }) {
-  const getGemsCopy = () => {
-    const tempGems = [];
-    gems.forEach((gem) => {
-      const gemCopy = {};
-      Object.keys(gem).forEach((key) => {
-        gemCopy[key] = gem[key];
-      });
-      tempGems.push(gemCopy);
-    });
-    return tempGems;
-  };
-
-  const shuffleGems = (array) => {
-    const randomized = [];
-    const tried = [];
-    let i = 0;
-    while (randomized.length !== array.length) {
-      const tryIndex = Math.floor(Math.random() * array.length);
-      if (!tried.includes(tryIndex)) {
-        tried.push(tryIndex);
-        randomized[i] = array[tryIndex];
-        i += 1;
-      }
-    }
-    return randomized;
-  };
-
-  const clearClicked = (array) => {
-    const cleared = [];
-    array.forEach((gem) => {
-      const clearGem = { ...gem };
-      clearGem.clicked = false;
-      cleared.push(clearGem);
-    });
-    return cleared;
-  };
-
   const clickGem = (event) => {
     const key = +event.target.dataset.key;
     let gemsCopy = getGemsCopy(gems);

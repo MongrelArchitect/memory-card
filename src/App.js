@@ -7,7 +7,7 @@ import Footer from './components/Footer';
 import './styles/reset.css';
 import './styles/style.css';
 
-import gemstones from './components/Gems';
+import { gems as gemstones } from './components/Gems';
 
 export default function App() {
   const [gems, setGems] = useState(gemstones);
@@ -17,6 +17,7 @@ export default function App() {
 
   return (
     <div className="container">
+      <div className="grayout" />
       <Header />
       <Scoreboard score={score} best={best} max={gems.length} />
       <Gameboard
