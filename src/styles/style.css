@@ -1,28 +1,124 @@
+@import url('https://fonts.googleapis.com/css2?family=Abril+Fatface&family=IBM+Plex+Mono&family=PT+Sans&family=Source+Serif+Pro&display=swap');
+
 * {
   box-sizing: border-box;
 }
 
 body {
   background: #ccc;
+  font-family: "Source Serif Pro";
+}
+
+h2 {
+  font-size: 1.4rem;
+}
+
+.container {
+  box-shadow: 0 0 5px #444;
+  display: grid;
+  grid-template-rows: 56px 80px 1fr 56px;
+  min-height: 100vh;
+  margin: auto;
+  max-width: 1000px;
+  width: 100%;
+}
+
+.footer {
+  font-size: 1.2rem;
+  gap: 8px;
+}
+
+.footer a {
+  color: #f1fff9;
+  font-weight: bold;
+  text-decoration: none;
 }
 
 .gems {
+  align-items: center;
+  background: #15133c;
   display: grid;
   gap: 16px;
-  grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(128px, 1fr));
+  justify-items: center;
+  padding: 16px;
 }
 
 .gem {
   align-items: center;
-  justify-content: flex-end;
-  border: 2px solid magenta;
+  border: 4px solid #ec994b;
+  border-radius: 20px;
   cursor: pointer;
   display: flex;
   flex-direction: column;
-  height: 100px;
-  width: 100px;
+  height: 128px;
+  justify-content: flex-end;
+  padding: 8px;
+  width: 128px;
 }
 
-#root > div > div {
-  border: 2px solid red;
+.gem:hover {
+  border: 4px solid #73777b;
+}
+
+.gem button {
+  background: #ec994b;
+  border: 2px solid #a87545;
+  border-radius: 8px;
+  cursor: pointer;
+  font-family: "PT Sans", sans-serif;
+  font-weight: bold;
+  padding: 4px;
+  user-select: none;
+  text-transform: uppercase;
+  width: 100%;
+}
+
+.gem button:hover {
+  color: #f1eee9;
+  background: #73777b;
+}
+
+.header {
+  border-bottom: 4px solid #4b525b;
+  font-family: "Abril Fatface", serif;
+  font-size: 2rem;
+}
+
+.header, 
+.footer {
+  align-items: center;
+  background: #73777b;
+  color: #f1eee9;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-shadow: 0 0 4px #15133c;
+}
+
+.score {
+  font-family: "IBM Plex Mono", monospace;
+  font-size: 1.6rem;
+}
+
+.scoreboard {
+  align-items: center;
+  background: #ec994b;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  justify-content: center;
+  padding: 16px;
+}
+
+.scoreboard > div {
+  display: flex;
+  font-size: 1.4rem;
+  gap: 32px;
+}
+
+.scoreboard > div span {
+  align-items: end;
+  display: flex;
+  gap: 8px;
 }

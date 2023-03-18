@@ -4,7 +4,24 @@ import Scoreboard from './components/Scoreboard';
 import Gameboard from './components/Gameboard';
 import Footer from './components/Footer';
 
-import placeholder from './images/placeholder.jpg';
+import alexandrite from './images/alexandrite.png';
+import amber from './images/amber.png';
+import amethyst from './images/amethyst.png';
+import ammolite from './images/ammolite.png';
+import aquamarine from './images/aquamarine.png';
+import citrene from './images/citrene.png';
+import diamond from './images/diamond.png';
+import emerald from './images/emerald.png';
+import garnet from './images/garnet.png';
+import lapis from './images/lapis.png';
+import opal from './images/opal.png';
+import pearl from './images/pearl.png';
+import ruby from './images/ruby.png';
+import sapphire from './images/sapphire.png';
+import tanzanite from './images/tanzanite.png';
+import topaz from './images/topaz.png';
+import tourmaline from './images/tourmaline.png';
+import turquoise from './images/turquoise.png';
 
 import './styles/reset.css';
 import './styles/style.css';
@@ -13,92 +30,92 @@ export default function App() {
   const [gems, setGems] = useState([
     {
       name: 'amethyst',
-      image: placeholder,
+      image: amethyst,
       clicked: false,
     },
     {
       name: 'diamond',
-      image: placeholder,
+      image: diamond,
       clicked: false,
     },
     {
       name: 'citrene',
-      image: placeholder,
+      image: citrene,
       clicked: false,
     },
     {
       name: 'emerald',
-      image: placeholder,
+      image: emerald,
       clicked: false,
     },
     {
       name: 'sapphire',
-      image: placeholder,
+      image: sapphire,
       clicked: false,
     },
     {
       name: 'ruby',
-      image: placeholder,
+      image: ruby,
       clicked: false,
     },
     {
       name: 'tourmaline',
-      image: placeholder,
+      image: tourmaline,
       clicked: false,
     },
     {
       name: 'garnet',
-      image: placeholder,
+      image: garnet,
       clicked: false,
     },
     {
       name: 'opal',
-      image: placeholder,
+      image: opal,
       clicked: false,
     },
     {
       name: 'topaz',
-      image: placeholder,
+      image: topaz,
       clicked: false,
     },
     {
       name: 'alexandrite',
-      image: placeholder,
+      image: alexandrite,
       clicked: false,
     },
     {
       name: 'tanzanite',
-      image: placeholder,
+      image: tanzanite,
       clicked: false,
     },
     {
       name: 'amber',
-      image: placeholder,
+      image: amber,
       clicked: false,
     },
     {
       name: 'aquamarine',
-      image: placeholder,
+      image: aquamarine,
       clicked: false,
     },
     {
       name: 'pearl',
-      image: placeholder,
+      image: pearl,
       clicked: false,
     },
     {
       name: 'lapis lazuli',
-      image: placeholder,
+      image: lapis,
       clicked: false,
     },
     {
       name: 'turquoise',
-      image: placeholder,
+      image: turquoise,
       clicked: false,
     },
     {
-      name: 'jade',
-      image: placeholder,
+      name: 'ammolite',
+      image: ammolite,
       clicked: false,
     },
   ]);
@@ -107,7 +124,7 @@ export default function App() {
   const [best, setBest] = useState(0);
 
   return (
-    <div>
+    <div className="container">
       <Header />
       <Scoreboard score={score} best={best} max={gems.length} />
       <Gameboard

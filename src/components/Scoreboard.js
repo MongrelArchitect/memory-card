@@ -2,18 +2,24 @@ import React from 'react';
 
 export default function Scoreboard({ score, best, max }) {
   return (
-    <div>
-      <h2>Scoreboard</h2>
-      <span>
-        Current:
-        {score}
-      </span>
-      <span>
-        Best:
-        {best}
-        /
-        {max}
-      </span>
+    <div className="scoreboard">
+      <h2>SCORE</h2>
+      <div>
+        <span>
+          Current:
+          <span className="score">
+            {score}
+          </span>
+        </span>
+        <span>
+          Best:
+          <span className="score">
+            {best}
+            /
+            {max}
+          </span>
+        </span>
+      </div>
     </div>
   );
 }

@@ -75,36 +75,31 @@ export default function Gameboard({
   }, []);
 
   return (
-    <div>
-      <h2>Gameboard</h2>
-      <div className="gems">
-        {gems.map((gem) => (
-          <div
-            className="gem"
-            data-key={gems.indexOf(gem)}
-            key={gems.indexOf(gem)}
-            onClick={clickGem}
-            onKeyDown={clickGem}
-            role="button"
-            tabIndex={0}
-            style={{ background: `top no-repeat url(${gem.image})` }}
-          >
-            <button
-              data-key={gems.indexOf(gem)}
-              onClick={clickGem}
-              type="button"
-            >
-              {gem.name}
-            </button>
-            {/*
+    <div className="gems">
+      {gems.map((gem) => (
+        <div
+          className="gem"
+          data-key={gems.indexOf(gem)}
+          key={gems.indexOf(gem)}
+          onClick={clickGem}
+          onKeyDown={clickGem}
+          role="button"
+          tabIndex={0}
+          style={{
+            background: `center/90% no-repeat #f1eee9 url(${gem.image})`,
+          }}
+        >
+          <button data-key={gems.indexOf(gem)} onClick={clickGem} type="button">
+            {gem.name}
+          </button>
+          {/*
             <span>
               clicked:
               {gem.clicked ? 'YES' : 'no'}
             </span>
             */}
-          </div>
-        ))}
-      </div>
+        </div>
+      ))}
     </div>
   );
 }
