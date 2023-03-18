@@ -62,6 +62,15 @@ export default function Gameboard({
   };
 
   useEffect(() => {
+    if (score === gems.length) {
+      setBest(score);
+      setScore(0);
+      setGems(clearClicked(getGemsCopy(gems)));
+      alert('game over');
+    }
+  }, [score]);
+
+  useEffect(() => {
     setGems(shuffleGems(getGemsCopy(gems)));
   }, []);
 

@@ -64,7 +64,7 @@ export default function App() {
   return (
     <div>
       <Header />
-      <Scoreboard score={score} best={best} />
+      <Scoreboard score={score} best={best} max={gems.length} />
       <Gameboard
         gems={gems}
         setGems={setGems}

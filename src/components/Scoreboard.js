@@ -1,6 +1,6 @@
 import React from 'react';
 
-export default function Scoreboard({ score, best }) {
+export default function Scoreboard({ score, best, max }) {
   return (
     <div>
       <h2>Scoreboard</h2>
@@ -11,6 +11,8 @@ export default function Scoreboard({ score, best }) {
       <span>
         Best:
         {best}
+        /
+        {max}
       </span>
     </div>
   );
