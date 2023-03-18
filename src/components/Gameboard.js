@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+import React from 'react';
 
 import {
   getGemsCopy, shuffleGems, clearClicked,
@@ -27,19 +27,6 @@ export default function Gameboard({
     }
     setGems(shuffleGems(gemsCopy));
   };
-
-  useEffect(() => {
-    if (score === gems.length) {
-      setBest(score);
-      setScore(0);
-      setGems(clearClicked(getGemsCopy(gems)));
-      alert('game over');
-    }
-  }, [score]);
-
-  useEffect(() => {
-    setGems(shuffleGems(getGemsCopy(gems)));
-  }, []);
 
   return (
     <div className="gems">
