@@ -19,7 +19,7 @@ import turquoise from '../images/turquoise.png';
 import carnelian from '../images/carnelian.png';
 import tiger from '../images/tiger.png';
 
-const gems = [
+const gemstones = [
   {
     name: 'amethyst',
     image: amethyst,
@@ -122,7 +122,7 @@ const gems = [
   },
 ];
 
-const getGemsCopy = () => {
+const getGemsCopy = (gems) => {
   const tempGems = [];
   gems.forEach((gem) => {
     const gemCopy = {};
@@ -160,5 +160,5 @@ const clearClicked = (array) => {
 };
 
 export {
-  gems, getGemsCopy, shuffleGems, clearClicked,
+  gemstones, getGemsCopy, shuffleGems, clearClicked,
 };

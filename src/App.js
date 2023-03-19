@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import Grayout from './components/Grayout';
 import Header from './components/Header';
 import Scoreboard from './components/Scoreboard';
 import Gameboard from './components/Gameboard';
@@ -8,7 +9,7 @@ import './styles/reset.css';
 import './styles/style.css';
 
 import {
-  gems as gemstones,
+  gemstones,
   clearClicked,
   getGemsCopy,
   shuffleGems,
@@ -23,9 +24,8 @@ export default function App() {
   useEffect(() => {
     if (score === gems.length) {
       setBest(score);
-      setScore(0);
+      // setScore(0);
       setGems(clearClicked(getGemsCopy(gems)));
-      alert('game over');
     }
   }, [score]);
 
@@ -35,7 +35,11 @@ export default function App() {
 
   return (
     <div className="container">
-      <div className="grayout" />
+      <Grayout
+        setScore={setScore}
+        setBest={setBest}
+        gameOver={score === gems.length}
+      />
       <Header />
       <Scoreboard score={score} best={best} max={gems.length} />
       <Gameboard

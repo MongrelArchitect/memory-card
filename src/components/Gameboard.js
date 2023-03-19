@@ -41,12 +41,6 @@ export default function Gameboard({
           <button data-key={gems.indexOf(gem)} onClick={clickGem} type="button">
             {gem.name}
           </button>
-          {/*
-            <span>
-              clicked:
-              {gem.clicked ? 'YES' : 'no'}
-            </span>
-            */}
         </div>
       ))}
     </div>
