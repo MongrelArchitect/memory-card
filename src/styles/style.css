@@ -76,11 +76,14 @@ h2 {
   width: 100%;
 }
 
-.gem button:hover,
-.gem button:focus {
+.gem button:hover {
   color: #f1eee9;
   background: #73777b;
   outline: none;
+}
+
+.gem button:focus {
+  outline: 2px solid #15133c;
 }
 
 .grayout {
